@@ -1,0 +1,6 @@
+fastqc Protiumkleinii_S1_L008_R1_001_fastq.gz
+
+fastqc Protiumkleinii_S1_L008_R2_001.fastq.gz
+
+
+#FASTQC results are in the local lab machine for now: /home/bioma/protium_2016/
