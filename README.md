@@ -7,6 +7,7 @@
 #There are 262,652,964 pairs of 2x100pd reads (525,305,928 total reads). FASTQC analysis showed good quality of reads.
 
 ./fastqc Protiumkleinii_S1_L008_R1_001_fastq.gz
+
 ./fastqc Protiumkleinii_S1_L008_R2_001.fastq.gz
 
 #FASTQC results are in the local lab machine for now:
