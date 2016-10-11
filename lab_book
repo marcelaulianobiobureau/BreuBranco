@@ -1,11 +1,32 @@
-#7 de Outubro, 2016. 
+7 de Outubro, 2016. 
 
-#I've downloaded the PCR-Free reads and run FASTQC. Won't do much more localy because Mauro wants it done in the cloud.
-#There are 262,652,964 pairs of 2x100pd reads (525,305,928 total reads). FASTQC analysis showed good quality of reads.
-#FASTQC results are in the local lab machine for now:
+I've downloaded the PCR-Free reads and run FASTQC. Won't do much more localy because Mauro wants it done in the cloud.
+There are 262,652,964 pairs of 2x100pd reads (525,305,928 total reads). FASTQC analysis showed good quality of reads.
+FASTQC results are in the local lab machine for now:
 
-#/home/bioma/protium_2016/Protiumkleinii_S1_L008_R1_001_fastqc.zip 
-#/home/bioma/protium_2016/Protiumkleinii_S1_L008_R2_001_fastqc.zip
-#/home/bioma/protium_2016/Protiumkleinii_S1_L008_R1_001_fastqc.html
-#/home/bioma/protium_2016/Protiumkleinii_S1_L008_R2_001_fastqc.html
+/home/bioma/protium_2016/Protiumkleinii_S1_L008_R1_001_fastqc.zip 
+/home/bioma/protium_2016/Protiumkleinii_S1_L008_R2_001_fastqc.zip
+/home/bioma/protium_2016/Protiumkleinii_S1_L008_R1_001_fastqc.html
+/home/bioma/protium_2016/Protiumkleinii_S1_L008_R2_001_fastqc.html
+
+11 de Outubro, 2016
+
+1-) Connecting to bastion
+
+chmod 400 bastion.pem 
+ssh-add bastion.pem
+ssh -A ubuntu@XXXX (details on e-mail)
+
+2-) Starting and stoping the amazon machine
+
+aws ec2 start-instances --instance-ids xxx
+aws ec2 stop-instances --instance-ids xxx 
+
+3-) After starting, way 2 minutes and then connect to the machine through ssh.
+
+ssh ubuntu@xxxx (e-mail)
+
+
+4-) 
+
 
