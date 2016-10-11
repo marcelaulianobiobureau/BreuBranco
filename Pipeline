@@ -3,3 +3,7 @@ fastqc Protiumkleinii_S1_L008_R1_001_fastq.gz
 fastqc Protiumkleinii_S1_L008_R2_001.fastq.gz
 
 #FASTQC results are in the local lab machine for now: /home/bioma/protium_2016/
+
+#Once connected to the working station (see lab_book) then import the files from S3
+
+s3cmd get s3://_path_of_file
