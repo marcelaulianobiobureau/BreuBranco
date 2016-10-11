@@ -27,6 +27,9 @@ aws ec2 stop-instances --instance-ids xxx
 ssh ubuntu@xxxx (e-mail)
 
 
-4-) 
+4-) Getting files from S3
+
+s3cmd get s3://bioinfobiobureau/input/ProtiumkleiniiXXX
+
 
 
