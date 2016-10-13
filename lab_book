@@ -35,5 +35,5 @@ s3cmd get s3://bioinfobiobureau/input/ProtiumkleiniiXXX
 
 Memory consumption of trimmomatic (running command on line 11 of the pipeline document)
 
-top: ubuntu    20   0 3420968 810828  10968 S 197.8  9.9 152:16.18 java -jar /usr/share/java/trimmomatic.jar PE
+top -c: ubuntu    20   0 3420968 810828  10968 S 197.8  9.9 152:16.18 java -jar /usr/share/java/trimmomatic.jar PE
 
