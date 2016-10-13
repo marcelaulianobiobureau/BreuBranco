@@ -9,3 +9,8 @@ fastqc Protiumkleinii_S1_L008_R2_001.fastq.gz
 s3cmd get s3://_path_of_file
 
 nohup java -jar /usr/share/java/trimmomatic.jar PE -threads 6 -phred33 /home/ubuntu/breu_branco/Protiumkleinii_S1_L008_R1_001.fastq /home/ubuntu/breu_branco/Protiumkleinii_S1_L008_R2_001.fastq /home/ubuntu/breu_branco/Protiumkleinii_S1_L008.output2_forward_paired.fq /home/ubuntu/breu_branco/Protiumkleinii_S1_L008.output2_forward_unpaired.fq /home/ubuntu/breu_branco/Protiumkleinii_S1_L008.output2_reverse_paired.fq /home/ubuntu/breu_branco/Protiumkleinii_S1_L008.output_reverse_unpaired2.fq ILLUMINACLIP:/home/ubuntu/scripts/truseq.adapters.fasta:2:30:10 SLIDINGWINDOW:4:2 LEADING:10 TRAILING:10 CROP:101 HEADCROP:0 MINLEN:80 &
+
+/home/ubuntu/scripts/seqtk/./seqtk sample -s100 Protiumkleinii_S1_L008.output2_forward_paired.fq 10000
+/home/ubuntu/scripts/seqtk/./seqtk sample -s100 Protiumkleinii_S1_L008.output2_reverse_paired.fq 10000
+
+nohup /home/ubuntu/scripts/bbmap/./khist.sh in1=/home/ubuntu/breu_branco/Protiumkleinii_S1_L008.output2_forward_paired.fq.10000 in2=/home/ubuntu/breu_branco/Protiumkleinii_S1_L008.output2_reverse_paired.fq.10000 khist=khist.txt peaks=peaks.txt -Xmx6g
