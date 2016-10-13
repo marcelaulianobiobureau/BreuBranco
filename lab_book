@@ -37,3 +37,9 @@ Memory consumption of trimmomatic (running command on line 11 of the pipeline do
 
 top -c: ubuntu    20   0 3420968 810828  10968 S 197.8  9.9 152:16.18 java -jar /usr/share/java/trimmomatic.jar PE
 
+Trimmomatic run succesfully!
+
+Output: 
+
+Input Read Pairs: 262652964 Both Surviving: 260242235 (99.08%) Forward Only Surviving: 14692 (0.01%) Reverse Only Surviving: 1008691 (0.38%) Dropped: 1387346 (0.53%)
+
