@@ -14,3 +14,5 @@ nohup java -jar /usr/share/java/trimmomatic.jar PE -threads 6 -phred33 /home/ubu
 /home/ubuntu/scripts/seqtk/./seqtk sample -s100 Protiumkleinii_S1_L008.output2_reverse_paired.fq 10000
 
 nohup /home/ubuntu/scripts/bbmap/./khist.sh in1=/home/ubuntu/breu_branco/Protiumkleinii_S1_L008.output2_forward_paired.fq.10000 in2=/home/ubuntu/breu_branco/Protiumkleinii_S1_L008.output2_reverse_paired.fq.10000 khist=khist.txt peaks=peaks.txt -Xmx6g
+
+nohup jellyfish count -m 31 -s 1G -C -o Protiumkleinii_S1_L008.output2_forward_reverse_paired.count -U 1000 -t 1 Protiumkleinii_S1_L008.output2_forward_paired.fq Protiumkleinii_S1_L008.output2_reverse_paired.fq
