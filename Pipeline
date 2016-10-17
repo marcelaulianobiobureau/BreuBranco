@@ -16,3 +16,9 @@ nohup java -jar /usr/share/java/trimmomatic.jar PE -threads 6 -phred33 /home/ubu
 nohup /home/ubuntu/scripts/bbmap/./khist.sh in1=/home/ubuntu/breu_branco/Protiumkleinii_S1_L008.output2_forward_paired.fq.10000 in2=/home/ubuntu/breu_branco/Protiumkleinii_S1_L008.output2_reverse_paired.fq.10000 khist=khist.txt peaks=peaks.txt -Xmx6g
 
 nohup jellyfish count -m 31 -s 1G -C -o Protiumkleinii_S1_L008.output2_forward_reverse_paired.count -U 1000 -t 1 Protiumkleinii_S1_L008.output2_forward_paired.fq Protiumkleinii_S1_L008.output2_reverse_paired.fq
+
+
+#sum(as.numeric(Protiumkleinii_S1_L008.output2_forward_reverse_paired.count_all[16:5000,1]*Protiumkleinii_S1_L008.output2_forward_reverse_paired.count_all[16:5000,2]))/34
+#[1] 904294947
+
+#nohup python /home/ubuntu/scripts/SPAdes-3.9.0-Linux/bin/dipspades.py --pe1-1 Protiumkleinii_S1_L008.output2_forward_paired.fq --pe1-2 Protiumkleinii_S1_L008.output2_reverse_paired.fq --expect-gaps --only-assembler --hap-assembly --memory 6 -o test1-protium
