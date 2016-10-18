@@ -22,3 +22,6 @@ nohup jellyfish count -m 31 -s 1G -C -o Protiumkleinii_S1_L008.output2_forward_r
 #[1] 904294947
 
 #nohup python /home/ubuntu/scripts/SPAdes-3.9.0-Linux/bin/dipspades.py --pe1-1 Protiumkleinii_S1_L008.output2_forward_paired.fq --pe1-2 Protiumkleinii_S1_L008.output2_reverse_paired.fq --expect-gaps --only-assembler --hap-assembly --memory 6 -o test1-protium
+
+#teste 1 18-10
+#nohup python /home/ubuntu/scripts/SPAdes-3.9.0-Linux/bin/dipspades.py -t 15 --pe1-1 Protiumkleinii_S1_L008.output2_forward_paired.fq --pe1-2 Protiumkleinii_S1_L008.output2_reverse_paired.fq --expect-gaps --only-assembler --disable-rr --memory 110 -o spades_protium
