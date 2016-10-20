@@ -43,3 +43,12 @@ Output:
 
 Input Read Pairs: 262652964 Both Surviving: 260242235 (99.08%) Forward Only Surviving: 14692 (0.01%) Reverse Only Surviving: 1008691 (0.38%) Dropped: 1387346 (0.53%)
 
+
+
+20-10-2016
+
+Soapdenovo finished. This is the result:
+
+After that, I thought about running augustus, I did it but stopped before it finishs. I'll run spades to compare those 2 assemblers, and I'm still unsure about masking or not this draft.
+
+ls | grep -P "soap*" | xargs -I {} -P 10 bash -c "/home/ubuntu/scripts/augustus.2.5.5/bin/augustus --genemodel=complete --strand=both --noInFrameStop=true --gff3=on --uniqueGeneId=true --species=arabidopsis --protein=on --codingseq=on {} > {}.complete.gff"
