@@ -52,3 +52,12 @@ Soapdenovo finished. This is the result:
 After that, I thought about running augustus, I did it but stopped before it finishs. I'll run spades to compare those 2 assemblers, and I'm still unsure about masking or not this draft.
 
 ls | grep -P "soap*" | xargs -I {} -P 10 bash -c "/home/ubuntu/scripts/augustus.2.5.5/bin/augustus --genemodel=complete --strand=both --noInFrameStop=true --gff3=on --uniqueGeneId=true --species=arabidopsis --protein=on --codingseq=on {} > {}.complete.gff"
+
+
+ As I cannot wait, I took one piece of augustus that finished and run a script to get the coding regions. Inside this piece there are 2 thousand coding regions predicted.
+"/home/bioma/scripts/augustus.2.5.5/scripts/getAnnoFasta.pl soap.1.fsa.complete.gff --seqfile=/home/bioma/protium_2016/protium.graph_prefix.scafSeq --protein=on --codingseq=on
+Then, I decided to make a BLAST with the cyp450 db from JAmerico
+blastall -p blastp -i /home/bioma/protium_2016/soap_parts/soap.1.fsa.complete.aa -d PF00067_full_length_sequences.fasta -o /home/bioma/protium_2016/soap_parts/soap.1.fsa.complete.aa.PF00067_full_length.blastp1e05 -e 1e-05
+and I found that a good amound, around 220, blasted good with more than 50% of its coverage with the cyps.
+cat soap.1.fsa.complete.aa.PF00067_full_length.blastp1e05.cov | awk -F"\t" '($13 >= 50) {print $0}' > soap.1.fsa.complete.aa.PF00067_full_length.blastp1e05.cov.50
+
