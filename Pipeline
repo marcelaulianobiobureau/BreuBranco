@@ -34,3 +34,5 @@ wget https://sourceforge.net/projects/bbmap/
 #use stats.sh from the bbmap package to see assembly general stats.
 /home/ubuntu/scripts/bbmap/./stats.sh graph_prefix.scafSeq
 
+#as soap finished. I'm running spades again with the following command line:
+#nohup python /home/ubuntu/scripts/SPAdes-3.9.0-Linux/bin/dipspades.py -t 15 --pe1-1 Protiumkleinii_S1_L008.output2_forward_paired.fq --pe1-2 Protiumkleinii_S1_L008.output2_reverse_paired.fq --expect-gaps --only-assembler --disable-rr --memory 110 -o spades_breubranco
