@@ -72,3 +72,6 @@ Reading from file: soap.all.fsa.complete.aa
 Reading and writing in fasta format
 Start filtering...
 Done. Removed 11331 of 60133 sequneces
+
+Using the instance i-b30687a5 to run a blast with uniprot for the 48801 proteins without Xs that were predicted by augustus.
+nohup blastp -query soap.all.fsa.complete_Ns_removed.aa -db /home/ubuntu/uniprot_sprot.fasta -evalue 1e-05 -num_threads 8 -out soap.all.fsa.complete.noX.aa.unprot.blastp1e05
