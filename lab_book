@@ -61,3 +61,8 @@ blastall -p blastp -i /home/bioma/protium_2016/soap_parts/soap.1.fsa.complete.aa
 and I found that a good amound, around 220, blasted good with more than 50% of its coverage with the cyps.
 cat soap.1.fsa.complete.aa.PF00067_full_length.blastp1e05.cov | awk -F"\t" '($13 >= 50) {print $0}' > soap.1.fsa.complete.aa.PF00067_full_length.blastp1e05.cov.50
 
+
+21-10-2016
+
+First augustus (arabnopsis) results with SOAP assembly predicted more than 60 thousand proteins. So now I need to clean it. 
+/home/bioma/protium_2016/soap_parts/soap.all.fsa.complete.*
