@@ -40,3 +40,6 @@ wget https://sourceforge.net/projects/bbmap/
 #as local computer has only 4 cores, I've partitionated the soap scaffolds file in 3 to run augustus with xargs. It's running localy now.
 perl /home/bioma/scripts/split_multifasta.pl --input_file=protium.graph_prefix.scafSeq --seqs_per_file=553403 --output_dir=./soap_parts
 ls | grep -P "soap*" | xargs -I {} -P 3 bash -c "/home/bioma/scripts/augustus.2.5.5/bin/augustus --genemodel=complete --strand=both --noInFrameStop=true --gff3=on --uniqueGeneId=true --species=arabidopsis --protein=on --codingseq=on {} > {}.complete.gff"
+
+cat soap.2.fsa.complete.gff soap.3.fsa.complete.gff soap.1.fsa.complete.gff > soap.all.fsa.complete.gff
+/home/bioma/scripts/augustus.2.5.5/scripts/getAnnoFasta.pl soap.all.fsa.complete.gff --seqfile=/home/bioma/protium_2016/protium.graph_prefix.scafSeq
