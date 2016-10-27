@@ -80,5 +80,44 @@ nohup blastp -query soap.all.fsa.complete_Ns_removed.aa -db /home/ubuntu/uniprot
 
 27-10-2016
 
+Results of SOAPdenovo assembly
+
+SOAPdenovo – Breu branco
+
+Main genome scaffold total:         	1660208
+Main genome contig total:           	2046341
+Main genome scaffold sequence total:	647.324 MB
+Main genome contig sequence total:  	636.403 MB  	1.687% gap
+Main genome scaffold N/L50:         	112579/1.032 KB
+Main genome contig N/L50:           	224534/510
+Main genome scaffold N/L90:         	1185226/127
+Main genome contig N/L90:           	1488738/127
+Max scaffold length:                	52.265 KB
+Max contig length:                  	33.382 KB
+Number of scaffolds > 50 KB:        	2
+% main genome in scaffolds > 50 KB: 	0.02%
+
+Minimum 	Number        	Number        	Total         	Total         	Scaffold
+Scaffold	of            	of            	Scaffold      	Contig        	Contig  
+Length  	Scaffolds     	Contigs       	Length        	Length        	Coverage
+
+--------	--------------	--------------	--------------	--------------	--------
+    All 	     1,660,208	     2,046,341	   647,323,836	   636,402,563	  98.31%
+     50 	     1,660,208	     2,046,341	   647,323,836	   636,402,563	  98.31%
+    100 	     1,660,208	     2,046,341	   647,323,836	   636,402,563	  98.31%
+    250 	       428,330	       812,934	   476,036,734	   465,154,319	  97.71%
+    500 	       229,912	       563,793	   407,276,921	   397,890,533	  97.70%
+   1 KB 	       116,491	       358,810	   327,638,817	   320,842,457	  97.93%
+ 2.5 KB 	        38,573	       153,496	   208,574,874	   205,289,546	  98.42%
+   5 KB 	        14,328	        64,605	   124,912,122	   123,397,028	  98.79%
+  10 KB 	         3,525	        18,854	    51,218,289	    50,680,985	  98.95%
+  25 KB 	           146	         1,020	     4,318,539	     4,296,283	  99.48%
+  50 KB 	             2	            13	       103,280	       103,037	  99.76%
+
+
+Usando o treinamento do AUGUSTUS COM a espécie 
+
+
+
 Once we have genes predicted with augustus in the first Draft, shall we look for genes related to fragrance?
 
