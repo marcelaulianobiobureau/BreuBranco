@@ -124,8 +124,22 @@ Usando o treinamento do AUGUSTUS COM a espécie arabidopsis:
 2a-) Sequências anotadas com BLAST com o Uniprot: 24267 proteínas.
 
 
-Once we have genes predicted with augustus in the first Draft, shall we look for genes related to fragrance?
+Once we have genes predicted with augustus in the first Draft, shall we look for genes related to fragrance? 
+R: (genes das vias de terpeno)
+
 Create Circus images of scaffolds were these genes were predicted.
 
+27-10-2016
+
+1-) Chdit to get rid off redundance of the 24267 proteins
+
+2-) Look for enzymes (Marcelinha's pre-print PARA DIA 28/11). Olhar artigos. 
+
+3-) Map reads + GBS3 - circus (28 de novembro).
 
 
+4-) Mapear GBS3 (na base de dados).
+4a-) Gapfiller.
+5-) Orçamento RNA-Seq e PacBio
+
+Extra: qual tamanho das bibliotecas de GBS3.
