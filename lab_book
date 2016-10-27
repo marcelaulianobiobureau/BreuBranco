@@ -75,3 +75,10 @@ Done. Removed 11331 of 60133 sequneces
 
 Using the instance i-b30687a5 to run a blast with uniprot for the 48801 proteins without Xs that were predicted by augustus.
 nohup blastp -query soap.all.fsa.complete_Ns_removed.aa -db /home/ubuntu/uniprot_sprot.fasta -evalue 1e-05 -num_threads 8 -out soap.all.fsa.complete.noX.aa.unprot.blastp1e05
+
+
+
+27-10-2016
+
+Once we have genes predicted with augustus in the first Draft, shall we look for genes related to fragrance?
+
