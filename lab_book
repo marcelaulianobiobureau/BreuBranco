@@ -147,3 +147,7 @@ Extra: qual tamanho das bibliotecas de GBS3.
 6-) Onde colocar os resultados/plataforma (Raony).
 
 
+02-11-2016
+
+Raony opened a 60Gb of RAM, 32 cores for the genome mappings.
+Instance: c4.8xlarge ; i-a711353e
