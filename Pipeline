@@ -43,3 +43,8 @@ ls | grep -P "soap*" | xargs -I {} -P 3 bash -c "/home/bioma/scripts/augustus.2.
 
 cat soap.2.fsa.complete.gff soap.3.fsa.complete.gff soap.1.fsa.complete.gff > soap.all.fsa.complete.gff
 /home/bioma/scripts/augustus.2.5.5/scripts/getAnnoFasta.pl soap.all.fsa.complete.gff --seqfile=/home/bioma/protium_2016/protium.graph_prefix.scafSeq
+
+
+
+bowtie2-build Breu_branco.soap1.scafSeq Breu_branco.soap1.scafSeq.bowtie2
+nohup bowtie2 -x /home/ubuntu/breu_branco/Breu_branco.soap1.scafSeq.bowtie2 -p 16 --local --no-unal -1 /home/ubuntu/breu_branco/Protiumkleinii_S1_L008.output2_forward_paired.fq /home/ubuntu/breu_branco/Protiumkleinii_S1_L008.output2_reverse_paired.fq -S /home/ubuntu/breu_branco/Protiumkleinii_S1_S2_soap1.sam
