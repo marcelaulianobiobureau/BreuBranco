@@ -48,3 +48,6 @@ cat soap.2.fsa.complete.gff soap.3.fsa.complete.gff soap.1.fsa.complete.gff > so
 
 bowtie2-build Breu_branco.soap1.scafSeq Breu_branco.soap1.scafSeq.bowtie2
 nohup bowtie2 -x /home/ubuntu/breu_branco/Breu_branco.soap1.scafSeq.bowtie2 -p 16 --local --no-unal -1 /home/ubuntu/breu_branco/Protiumkleinii_S1_L008.output2_forward_paired.fq /home/ubuntu/breu_branco/Protiumkleinii_S1_L008.output2_reverse_paired.fq -S /home/ubuntu/breu_branco/Protiumkleinii_S1_S2_soap1.sam
+
+
+nohup java -jar /usr/share/java/trimmomatic.jar SE -threads 6 -phred33 /home/ubuntu/breu_branco/GBS-MR3_S1_L008_R1_001.fastq.gz /home/ubuntu/breu_branco/GBS-MR3_S1_L008_R1_001.out.fastq HEADCROP:10 MINLEN:80 &
