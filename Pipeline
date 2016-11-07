@@ -51,3 +51,6 @@ nohup bowtie2 -x /home/ubuntu/breu_branco/Breu_branco.soap1.scafSeq.bowtie2 -p 1
 
 
 nohup java -jar /usr/share/java/trimmomatic.jar SE -threads 6 -phred33 /home/ubuntu/breu_branco/GBS-MR3_S1_L008_R1_001.fastq.gz /home/ubuntu/breu_branco/GBS-MR3_S1_L008_R1_001.out.fastq HEADCROP:10 MINLEN:80 &
+
+nohup java -jar /usr/share/java/trimmomatic.jar PE -threads 30 -phred33 GBS-MR3_S1_L008_R1_001.fastq.gz GBS-MR3_S1_L008_R2_001.fastq.gz GBS-MR3_S1_L008_R1_001.forward_paired.fastq.gz GBS-MR3_S1_L008_R1_001.forward_unpaired.fastq.gz GBS-MR3_S1_L008_R2_001.fastq.reverse.paired.gz GBS-MR3_S1_L008_R2_001.fastq.reverse.unpaired.gz ILLUMINACLIP:/home/ubuntu/breu_branco/barcodes:2:30:10 LEADING:10 TRAILING:10 SLIDINGWINDOW:4:2 MINLEN:65
+nohup bowtie2 -x /home/ubuntu/breu_branco/Breu_branco.soap1.scafSeq.bowtie2 -p 30 --no-unal -1 /home/ubuntu/breu_branco/trimmomatic_paired/GBS-MR3_S1_L008_R1_001.forward_paired.fastq.gz -2 /home/ubuntu/breu_branco/trimmomatic_paired/GBS-MR3_S1_L008_R2_001.fastq.reverse.paired.gz -S /home/ubuntu/breu_branco/GBS-MR3_S1_L008_R1_R2.trimmed.SOAP.sam
