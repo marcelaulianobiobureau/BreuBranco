@@ -174,5 +174,9 @@ Then, I took out aa sequences smaller than 50bp.
 
 soap.all.fsa.complete_Ns_removed.aa.chdit100.50orbigger and now we have 47314 sequences. 
 
+3-) Map reads + GBS3 - 10% of trimmmed GBS reads mapped with botiew (NOT Local). 
+
+Now, I'm stracting reads that mapped to run gapfiller and see how much that improves the assembly.
+
 
 
