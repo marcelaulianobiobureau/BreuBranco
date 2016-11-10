@@ -57,3 +57,8 @@ nohup bowtie2 -x /home/ubuntu/breu_branco/Breu_branco.soap1.scafSeq.bowtie2 -p 3
 
 #aligment of RAD-seq to soap draft genome and convertion to bam.
 nohup samtools view -@ 30 -Sb GBS-MR3_S1_L008_R1_R2.trimmed.SOAP.sam > GBS-MR3_S1_L008_R1_R2.trimmed.SOAP.bam
+
+
+#blasting non-redundant (cdhit 100%) non-smaller than 50 proteins.
+
+blastall -p blastp -i soap.all.fsa.complete_Ns_removed.aa.chdit100.50orbigger -d /home/bioma/scripts/db/uniprot_sprot.fasta -e 1e-05 -a 3 -o soap.all.fsa.complete_Ns_removed.aa.chdit100.50orbigger.swissprotblastp1e05
