@@ -64,7 +64,7 @@ nohup samtools view -@ 30 -Sb GBS-MR3_S1_L008_R1_R2.trimmed.SOAP.sam > GBS-MR3_S
 blastall -p blastp -i soap.all.fsa.complete_Ns_removed.aa.chdit100.50orbigger -d /home/bioma/scripts/db/uniprot_sprot.fasta -e 1e-05 -a 3 -o soap.all.fsa.complete_Ns_removed.aa.chdit100.50orbigger.swissprotblastp1e05
 
 
-#Open instance i-b20687a to do pfam analysis
+#Open instance i-b20687a (i-b20687a4) to do pfam analysis
 #Downloading pfamA.full
 
 
