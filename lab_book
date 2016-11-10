@@ -131,7 +131,7 @@ Create Circus images of scaffolds were these genes were predicted.
 
 27-10-2016
 
-1-) Chdit to get rid off redundance of the 24267 proteins
+1-) Chdit to get rid off redundance of the 48801 proteins
 
 2-) Look for enzymes (Marcelinha's pre-print PARA DIA 28/11). Olhar artigos. 
 
@@ -158,3 +158,21 @@ Instance: c4.8xlarge ; i-a711353e
 
 Sobre genomas de plantas:
 https://dl.sciencesocieties.org/publications/tpg/articles/6/2/plantgenome2013.03.0001in
+
+
+
+10-11-2016
+
+
+1-) Chdit to get rid off redundance of the 48801 proteins: 
+
+cd-hit -i soap.all.fsa.complete_Ns_removed.aa -o soap.all.fsa.complete_Ns_removed.aa.chdit0.9 -c 0.9
+
+Now it is: 48133 proteins.
+
+Then, I took out aa sequences smaller than 50bp.
+
+soap.all.fsa.complete_Ns_removed.aa.chdit100.50orbigger and now we have 47314 sequences. 
+
+
+
